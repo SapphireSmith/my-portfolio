@@ -1,7 +1,11 @@
+import { Link, useLocation } from "react-router-dom"
 
-const Navlink = () => {
+const Navlink = ({ title, url }: { title: string, url: string }) => {
+
+  const { pathname } = useLocation();
+
   return (
-    <div>Navlink</div>
+    <Link to={url} className={`rounded p-1 ${pathname === url && "bg-black text-white"}`} >{title}</Link>
   )
 }
 
