@@ -14,12 +14,12 @@ export default function App() {
         <div className="h-24">
           <Navbar />
         </div>
-        <div className="h-[calc(100vh-6rem)] overflow-y-auto">
+        <div className="h-[calc(100vh-6rem)] w-screen ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </TransitionProvider>

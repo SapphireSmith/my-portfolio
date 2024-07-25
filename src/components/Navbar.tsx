@@ -53,9 +53,9 @@ const Navbar = () => {
     },
     opened: {
       x: 0,
-      transition:{
-        when:"beforeChildren",
-        staggerChildren:0.3,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
       }
     }
   }
@@ -72,11 +72,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <div className="h-full w-screen  flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <Navlink title={link.title} url={link.url} key={link.title} />
+          <Navlink url={link.url} title={link.title} key={link.title} />
         ))}
       </div>
       {/* LOGO */}
@@ -91,40 +91,6 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
-
-      {/* RESPONSIVE MENU */}
-      <div className="md:hidden">
-        {/* MENU BUTTON */}
-        <button className="w-10 h-8 flex flex-col justify-between z-30 relative" onClick={() => setOpen(prev => !prev)}>
-          <motion.div variants={topVariants}
-            animate={open ? "opened" : "closed "}
-            className="w-10 h-1 bg-black rounded origin-left"></motion.div>
-          <motion.div variants={centerVariants}
-            animate={open ? "opened" : "closed "}
-            className="w-10 h-1 bg-black rounded"></motion.div>
-          <motion.div variants={bottomVariants}
-            animate={open ? "opened" : "closed "}
-            className="w-10 h-1 bg-black rounded origin-left"></motion.div>
-        </button>
-        {/* MENU LIST */}
-        {open &&
-          <motion.div
-            variants={listVariant}
-            initial="closed"
-            animate="opened"
-            className=" absolute top-0 z-20 left-0 w-screen h-screen text-white flex flex-col justify-center gap-8 text-4xl items-center bg-black">
-            {
-              links.map((link) => (
-                <motion.div variants={listItemVariants} className="" key={link.title} >
-                  <Link to={link.url} >{link.title}</Link>
-                </motion.div >
-              ))
-            }
-          </motion.div>
-        }
-      </div>
-
-
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4 w-1/3">
         <Link to="/">
@@ -145,6 +111,49 @@ const Navbar = () => {
         <Link to="/">
           <img src={linkedin} alt="" width={24} height={24} />
         </Link>
+      </div>
+      {/* RESPONSIVE MENU */}
+      <div className="md:hidden">
+        {/* MENU BUTTON */}
+        <button
+          className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          <motion.div
+            variants={topVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
+          <motion.div
+            variants={centerVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded"
+          ></motion.div>
+          <motion.div
+            variants={bottomVariants}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
+        </button>
+        {/* MENU LIST */}
+        {open && (
+          <motion.div
+            variants={listVariant}
+            initial="closed"
+            animate="opened"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+          >
+            {links.map((link) => (
+              <motion.div
+                variants={listItemVariants}
+                className=""
+                key={link.title}
+              >
+                <Link to={link.url}>{link.title}</Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
       </div>
     </div>
   )

@@ -15,7 +15,7 @@ const Home = () => {
         </div>
 
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="h-1/2 lg:h-full pt-28 lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* TITLE */}
           <h1 className="text-4xl sm:text-6xl font-bold">
             Crafting Digital Experiences, Designing Tomorrow.
