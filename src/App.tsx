@@ -4,11 +4,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
+import TransitionProvider from './components/TransitionProvider'
 
 export default function App() {
+
   return (
     <BrowserRouter>
-      <div className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100">
+      <TransitionProvider>
         <div className="h-24">
           <Navbar />
         </div>
@@ -20,7 +22,7 @@ export default function App() {
             <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </div>
-      </div>
+      </TransitionProvider>
     </BrowserRouter>
   );
 }
