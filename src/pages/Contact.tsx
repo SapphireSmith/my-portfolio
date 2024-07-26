@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 const Contact = () => {
 
- const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const text = "Say Hello";
 
@@ -12,7 +12,7 @@ const Contact = () => {
 
   const sendEmail = () => {
     console.log('here');
-    
+
     // e.preventDefault();
     // setError(false);
     // setSuccess(false);
