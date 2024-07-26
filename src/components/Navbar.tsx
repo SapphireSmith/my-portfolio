@@ -149,7 +149,7 @@ const Navbar = () => {
                 className=""
                 key={link.title}
               >
-                <Link to={link.url}>{link.title}</Link>
+                <Link className="font-semibold" to={link.url}>{link.title}</Link>
               </motion.div>
             ))}
           </motion.div>
