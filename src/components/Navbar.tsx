@@ -62,13 +62,17 @@ const Navbar = () => {
 
   const listItemVariants = {
     closed: {
-      x: -200,
+      x: -20,
       opacity: 0
     },
     opened: {
       x: 0,
       opacity: 1
     }
+  }
+  const showClick = () => {
+    console.log('here');
+
   }
 
   return (
@@ -113,7 +117,7 @@ const Navbar = () => {
         </Link>
       </div>
       {/* RESPONSIVE MENU */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         {/* MENU BUTTON */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
@@ -141,16 +145,20 @@ const Navbar = () => {
             variants={listVariant}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {links.map((link) => (
-              <motion.div
-                variants={listItemVariants}
-                className=""
-                key={link.title}
-              >
-                <Link className="font-semibold" to={link.url}>{link.title}</Link>
-              </motion.div>
+              <Link className="" to={link.url}>
+                <motion.div
+                  variants={listItemVariants}
+                  className=""
+                  key={link.title}
+                >
+                  <div className=" p-5 w-full z-50" onClick={showClick}>
+                    {link.title === 'About' ? 'About' : link.title}
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         )}

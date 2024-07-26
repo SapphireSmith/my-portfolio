@@ -46,7 +46,7 @@ const Contact = () => {
     >
       <div className="h-full p-14 gap-8 flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* TEXT CONTAINER */}
-        <div className="h-1/5 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/5 pb-12 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -63,7 +63,7 @@ const Contact = () => {
                 {letter}
               </motion.span>
             ))}
-            <span className="text-[40px] sm:text-[60px] lg:text-[80px]">😊</span>
+            <span className="text-[40px] pb-14 sm:text-[60px] lg:text-[80px]">😊</span>
           </div>
         </div>
         {/* FORM CONTAINER */}
