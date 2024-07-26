@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
+// import { useRef, useState } from "react";
 // import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  // const [success, setSuccess] = useState(false);
+  // const [error, setError] = useState(false);
   const text = "Say Hello";
 
-  const form = useRef();
+  // const form = useRef();
 
   const sendEmail = () => {
     console.log('here');
@@ -69,7 +69,7 @@ const Contact = () => {
         {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
-          ref={form}
+          // ref={form}
           className="h-4/5 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-4"
         >
           <span>Hai Sapphire smith,</span>
@@ -88,7 +88,7 @@ const Contact = () => {
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>
-          {success && (
+          {/* {success && (
             <span className="text-green-600 font-semibold">
               Your message has been sent successfully!
             </span>
@@ -97,7 +97,7 @@ const Contact = () => {
             <span className="text-red-600 font-semibold">
               Something went wrong!
             </span>
-          )}
+          )} */}
         </form>
       </div>
     </motion.div>
