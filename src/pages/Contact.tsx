@@ -1,42 +1,37 @@
 import { motion } from "framer-motion";
-// import { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-
-  // const [success, setSuccess] = useState(false);
-  // const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const text = "Say Hello";
-
-  // const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('here');
+    e.preventDefault();
+    setError(false);
+    setSuccess(false);
 
-    // e.preventDefault();
-    // setError(false);
-    // setSuccess(false);
-
-    // emailjs
-    //   .sendForm(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.NEXT_PUBLIC_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setSuccess(true);
-    //       form.current.reset();
-    //     },
-    //     () => {
-    //       setError(true);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current!,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.status, result.text);
+          setSuccess(true);
+          form.current!.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setError(true);
+        }
+      );
   };
-
-
 
   return (
     <motion.div
@@ -70,10 +65,10 @@ const Contact = () => {
         {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
-          // ref={form}
+          ref={form}
           className="h-4/5 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-4"
         >
-          <span>Hai Sapphire smith,</span>
+          <span>Hai Sapphire Smith,</span>
           <textarea
             rows={6}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none"
@@ -82,14 +77,15 @@ const Contact = () => {
           <span>My mail address is:</span>
           <input
             name="user_email"
-            type="text"
+            type="email"
+            required
             className="bg-transparent border-b-2 border-b-black outline-none"
           />
           <span>Regards</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>
-          {/* {success && (
+          {success && (
             <span className="text-green-600 font-semibold">
               Your message has been sent successfully!
             </span>
@@ -98,11 +94,11 @@ const Contact = () => {
             <span className="text-red-600 font-semibold">
               Something went wrong!
             </span>
-          )} */}
+          )}
         </form>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

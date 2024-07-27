@@ -29,18 +29,19 @@ interface PortfolioItem {
     color: string;
     title: string;
     desc: string;
+    techs: string[];
     link: string;
-    img: string
-    github: string
+    github: string;
+    img: string;
     newImage: ImageItem[];
 }
-
 export const items: PortfolioItem[] = [
     {
         id: 1,
-        color: "from-red-300 to-blue-300",
+        color: "from-red-500 to-blue-500",
         title: "Nike Landing page",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: `Nike Landing page Developed using React.js and Tailwind css followed best practices to build clean and reusable code`,
+        techs: ["React.js", "Tailwind CSS"],
         link: "https://nike-webpage-opal.vercel.app/",
         github: "https://github.com/SapphireSmith/Nike-webpage",
         img: nike_landing_1,
@@ -64,9 +65,14 @@ export const items: PortfolioItem[] = [
     },
     {
         id: 2,
-        color: "from-blue-300 to-violet-300",
+        color: "from-green-500 to-yellow-500",
         title: "Tomato: food ordering platform",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: `Tomato: A Food Ordering Platform built using the MERN stack. 
+               Features include login, signup, add to cart, Stripe payment gateway, view orders and order tracking.
+               Additionally, an admin page was developed for easy product management, including adding,
+               editing, and deleting products. Options for viewing order details and managing orders, 
+               such as updating the order status to "Out for Delivery," "Delivered," etc., were also implemented.`,
+        techs: ["React.js", "Tailwind CSS", "Redux", "Node.js", "Express.js", "MongoDB"],
         link: "https://food-ordering-platform-frontend-x58p.onrender.com/",
         github: "https://github.com/SapphireSmith/food_ordering_platform",
         img: tomato_food_app_1,
@@ -90,9 +96,14 @@ export const items: PortfolioItem[] = [
     },
     {
         id: 3,
-        color: "from-purple-300 to-red-300",
+        color: "from-indigo-500 to-purple-500",
         title: "Chat App",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: `Chat App built using the MERN stack. The complete UI, as shown in the screenshot, 
+               is built using the popular UI library DaisyUI. Socket.IO was utilized for real-time messaging.
+               As part of my learning process, I used both Zustand and Redux for state management. Implemented s
+               ecure login and signup, as well as routing protection. MongoDB was used for securely storing user data.
+               Added notification sounds for incoming messages and included animations when a message arrives.`,
+        techs: ["React.js", "DaisyUI", "Tailwind CSS", "Redux", "Zustand", "Node.js", "Socket.IO", "Express.js", "MongoDB"],
         link: "https://chat-app-mern-fhab.onrender.com/",
         github: "https://github.com/SapphireSmith/chat-app-mern",
         img: chatapp_1,
@@ -116,9 +127,18 @@ export const items: PortfolioItem[] = [
     },
     {
         id: 4,
-        color: "from-violet-300 to-purple-300",
+        color: "from-blue-500 to-teal-500",
         title: "Online Multiplayer Game (Tic Tac Toe)",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: `Multiplayer Game (Tic Tac Toe) built using Socket.IO. I focused purely on 
+        the core functionality of the game rather than the design aspect. After countless 
+        hours of research, I developed the game logic and handled edge cases such as player
+         disconnections or exits by displaying a message to the opponent instead of crashing the game.
+        Implemented match-making for players based on room logic in Socket.IO and optimized the server by
+         deleting the room after the game ends. The game can end in two scenarios: player disconnection 
+         or game end (in a draw or a win). Additional features include displaying the live total player count 
+         and disabling user input if it's not the player's turn.
+                 `,
+        techs: ["React.js", "Zustand", "Node.js", "Socket.io", "Express.js"],
         link: "https://tic-tac-toe-multiplayer-client.onrender.com/",
         github: "https://github.com/SapphireSmith/tic-tac-toe-multiplayer",
         img: multiplayer_game_1,
@@ -143,9 +163,13 @@ export const items: PortfolioItem[] = [
 
     {
         id: 5,
-        color: "from-purple-300 to-red-300",
+        color: "from-purple-500 to-pink-500",
         title: "AI summarizer",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: `Used React.js for frontend development and utilized the popular platform Rapid API
+         (the largest API hub) for accessing the OpenAI GPT-3.5 model’s article summarizing API.
+          With this API, you only need to paste the link to a lengthy article, and it will provide 
+          a summarized essence of the content.`,
+        techs: ["React.js", "Rapid API", "OpenAI API"],
         link: "https://ai-sumz12.netlify.app",
         github: "https://github.com/SapphireSmith/ai-sumz",
         img: ai_sumz_1,
@@ -160,14 +184,14 @@ export const items: PortfolioItem[] = [
                 img: ai_sumz_2,
                 name: 'ai-sum-2'
             },
-
         ]
     },
     {
         id: 6,
-        color: "from-purple-300 to-red-300",
+        color: "from-gray-800 to-gray-500",
         title: "SASS Landing Page",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        desc: "A SASS landing page build using React.js and Tailwind CSS",
+        techs: ["React.js", "Tailwind CSS"],
         link: "https://react-analyics.netlify.app/",
         github: "https://github.com/SapphireSmith/analatical-website-react",
         img: sass_landing_1,
@@ -191,8 +215,17 @@ export const items: PortfolioItem[] = [
     },
 ];
 
+interface Bio {
+    about: string;
+    quote: string;
+}
 
-export const BIO = {
+interface Home {
+    title: string;
+    desc: string;
+}
+
+export const BIO: Bio = {
     about: ` I'm a Full Stack Developer, using React.js for frontend development 
     and Node.js for backend development. Like most developers around the world, 
     I am also self-taught. I started with C and C++, writing my first "Hello World" 
@@ -202,7 +235,7 @@ export const BIO = {
     quote: `Press any key to scroll down... 🖥️`
 }
 
-export const SKILLS = [
+export const SKILLS: string[] = [
     'JavaScript',
     'TypeScript',
     'React.js',
@@ -215,6 +248,7 @@ export const SKILLS = [
     'Bootstrap',
     'MUI',
     'Daisy UI',
+    'Tailwind UI',
     'Framer Motion',
     'Node.js',
     'Express.js',
@@ -231,7 +265,7 @@ export const SKILLS = [
 ]
 
 
-export const HOME = {
+export const HOME: Home = {
     title: `I'm Sapphire smith, nice to meet you.`,
     desc: `
     I'm a Full Stack Developer dedicated to crafting 

@@ -51,8 +51,8 @@ const About = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <img
-              src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt=""
+              src="https://avatar.iran.liara.run/public/boy"
+              alt="My image"
               width={112}
               height={112}
               className="w-28 h-28 rounded-full object-cover"

@@ -15,13 +15,17 @@ const Portfolio = () => {
   const { ref: ref2, inView: inView2 } = useInView({ threshold: 0.5 });
   const { ref: ref3, inView: inView3 } = useInView({ threshold: 0.5 });
   const { ref: ref4, inView: inView4 } = useInView({ threshold: 0.5 });
+  const { ref: ref5, inView: inView5 } = useInView({ threshold: 0.5 });
+  const { ref: ref6, inView: inView6 } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inView1) setBgColor(items[0].color);
     else if (inView2) setBgColor(items[1].color);
     else if (inView3) setBgColor(items[2].color);
     else if (inView4) setBgColor(items[3].color);
-  }, [inView1, inView2, inView3, inView4]);
+    else if (inView5) setBgColor(items[4].color);
+    else if (inView6) setBgColor(items[5].color);
+  }, [inView1, inView2, inView3, inView4, inView5, inView6]);
 
   const handleImageClick = (index: number, img: string, imgId: string) => {
     const newSelectedImages = [...selectedImages];
@@ -47,7 +51,7 @@ const Portfolio = () => {
           <div
             className="w-screen flex px-8 sm:px-16 py-14 items-center justify-center bg-gradient-to-r"
             key={item.id}
-            ref={[ref1, ref2, ref3, ref4][index]}
+            ref={[ref1, ref2, ref3, ref4, ref5, ref6][index]}
           >
             <div className="flex flex-col gap-5 text-white">
               <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-7xl">
@@ -80,8 +84,16 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="flex flex-col md:w-1/2 justify-between gap-4 pb-2">
-                  <p className="">
+                  <p className="flex flex-col gap-4">
                     {item.desc}
+                    <ol>
+                      <p className="font-bold" >Technology used</p>
+                      {
+                        item.techs.map((tech) => (
+                          <li key={tech} className="pl-1">{tech}</li>
+                        ))
+                      }
+                    </ol>
                   </p>
                   <div className="flex gap-4 justify-end">
                     <Link to={item.link}>
