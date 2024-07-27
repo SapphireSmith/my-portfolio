@@ -25,7 +25,6 @@ const PageTransition = ({ children }: { children: ReactNode; }) => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    {pathname === '/' ? <span className="text-4xl sm:text-6xl md:text-8xl">Back To Home</span> : ''}
                     {pathname.substring(1)}
                 </motion.div>
                 <motion.div
