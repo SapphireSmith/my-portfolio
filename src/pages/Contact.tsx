@@ -10,7 +10,8 @@ const Contact = () => {
 
   // const form = useRef();
 
-  const sendEmail = () => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     console.log('here');
 
     // e.preventDefault();

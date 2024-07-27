@@ -31,7 +31,7 @@ interface PortfolioItem {
     desc: string;
     link: string;
     img: string
-    github:string
+    github: string
     newImage: ImageItem[];
 }
 
@@ -42,7 +42,7 @@ export const items: PortfolioItem[] = [
         title: "Nike Landing page",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         link: "https://nike-webpage-opal.vercel.app/",
-        github:"https://github.com/SapphireSmith/Nike-webpage",
+        github: "https://github.com/SapphireSmith/Nike-webpage",
         img: nike_landing_1,
         newImage: [
             {
@@ -68,7 +68,7 @@ export const items: PortfolioItem[] = [
         title: "Tomato: food ordering platform",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         link: "https://food-ordering-platform-frontend-x58p.onrender.com/",
-        github:"https://github.com/SapphireSmith/food_ordering_platform",
+        github: "https://github.com/SapphireSmith/food_ordering_platform",
         img: tomato_food_app_1,
         newImage: [
             {
@@ -90,37 +90,11 @@ export const items: PortfolioItem[] = [
     },
     {
         id: 3,
-        color: "from-violet-300 to-purple-300",
-        title: "Online Multiplayer Game (Tic Tac Toe)",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-        link: "https://tic-tac-toe-multiplayer-client.onrender.com/",
-        github:"https://github.com/SapphireSmith/tic-tac-toe-multiplayer",
-        img: multiplayer_game_1,
-        newImage: [
-            {
-                id: 1,
-                img: multiplayer_game_1,
-                name: "multiplayer-game-1"
-            },
-            {
-                id: 2,
-                img: multiplayer_game_3,
-                name: "multiplayer-game-2"
-            },
-            {
-                id: 3,
-                img: multiplayer_game_2,
-                name: "multiplayer-game-3"
-            }
-        ]
-    },
-    {
-        id: 4,
         color: "from-purple-300 to-red-300",
         title: "Chat App",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         link: "https://chat-app-mern-fhab.onrender.com/",
-        github:"https://github.com/SapphireSmith/chat-app-mern",
+        github: "https://github.com/SapphireSmith/chat-app-mern",
         img: chatapp_1,
         newImage: [
             {
@@ -142,11 +116,38 @@ export const items: PortfolioItem[] = [
     },
     {
         id: 4,
+        color: "from-violet-300 to-purple-300",
+        title: "Online Multiplayer Game (Tic Tac Toe)",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+        link: "https://tic-tac-toe-multiplayer-client.onrender.com/",
+        github: "https://github.com/SapphireSmith/tic-tac-toe-multiplayer",
+        img: multiplayer_game_1,
+        newImage: [
+            {
+                id: 1,
+                img: multiplayer_game_1,
+                name: "multiplayer-game-1"
+            },
+            {
+                id: 2,
+                img: multiplayer_game_3,
+                name: "multiplayer-game-2"
+            },
+            {
+                id: 3,
+                img: multiplayer_game_2,
+                name: "multiplayer-game-3"
+            }
+        ]
+    },
+
+    {
+        id: 5,
         color: "from-purple-300 to-red-300",
         title: "AI summarizer",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         link: "https://ai-sumz12.netlify.app",
-        github:"https://github.com/SapphireSmith/ai-sumz",
+        github: "https://github.com/SapphireSmith/ai-sumz",
         img: ai_sumz_1,
         newImage: [
             {
@@ -159,16 +160,16 @@ export const items: PortfolioItem[] = [
                 img: ai_sumz_2,
                 name: 'ai-sum-2'
             },
-        
+
         ]
     },
     {
-        id: 4,
+        id: 6,
         color: "from-purple-300 to-red-300",
         title: "SASS Landing Page",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
         link: "https://react-analyics.netlify.app/",
-        github:"https://github.com/SapphireSmith/analatical-website-react",
+        github: "https://github.com/SapphireSmith/analatical-website-react",
         img: sass_landing_1,
         newImage: [
             {
@@ -189,3 +190,54 @@ export const items: PortfolioItem[] = [
         ]
     },
 ];
+
+
+export const BIO = {
+    about: ` I'm a Full Stack Developer, using React.js for frontend development 
+    and Node.js for backend development. Like most developers around the world, 
+    I am also self-taught. I started with C and C++, writing my first "Hello World" 
+    in Turbo C++ IDE instead of VS Code editor (Yes, the one with the blue console
+     where the mouse cursor would constantly hide after compiling...)
+      For the past two years, I've been writing "Hello World" in JavaScript. 🤓`,
+    quote: `Press any key to scroll down... 🖥️`
+}
+
+export const SKILLS = [
+    'JavaScript',
+    'TypeScript',
+    'React.js',
+    'Redux',
+    'Zustand',
+    'Next.js',
+    'CSS',
+    'HTML',
+    'Tailwind CSS',
+    'Bootstrap',
+    'MUI',
+    'Daisy UI',
+    'Framer Motion',
+    'Node.js',
+    'Express.js',
+    'WebRTC',
+    'Socket.io',
+    'JWT',
+    'MongoDB',
+    'SQL',
+    'Firebase',
+    'Stripe payment',
+    'Razorpay payment',
+    'WIX ecommerce API Integration',
+    'Git',
+]
+
+
+export const HOME = {
+    title: `I'm Sapphire smith, nice to meet you.`,
+    desc: `
+    I'm a Full Stack Developer dedicated to crafting 
+    exceptional digital experiences. I'm focused on building 
+    responsive full-stack web applications with a strong emphasis
+    on frontend development using React and Next.js and Node.js and Express.js 
+    in backend.
+    `
+}

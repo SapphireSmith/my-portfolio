@@ -145,7 +145,7 @@ const Navbar = () => {
             variants={listVariant}
             initial="closed"
             animate="opened"
-            className="fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center text-4xl z-40"
           >
             {links.map((link) => (
               <Link className="" to={link.url}>
@@ -154,7 +154,7 @@ const Navbar = () => {
                   className=""
                   key={link.title}
                 >
-                  <div className=" p-5 w-full z-50" onClick={showClick}>
+                  <div className=" w-screen flex hover:bg-[#222] delay-100 duration-200 justify-center p-5 border-b-[0.1px] border-t-[0.1px] border-[#2b2b2b] items-center z-0" onClick={showClick}>
                     {link.title === 'About' ? 'About' : link.title}
                   </div>
                 </motion.div>

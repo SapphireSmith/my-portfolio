@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { items } from "../constants/data";
-
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Portfolio = () => {
   const [bgColor, setBgColor] = useState(items[0].color);
@@ -55,7 +55,8 @@ const Portfolio = () => {
               </h1>
               <div className="flex flex-col md:flex-row gap-3 pt-5">
                 <div className="md:w-1/2">
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
                     src={selectedImages[index]}
                     alt={item.title}
                     className="object-cover rounded-lg"
@@ -64,13 +65,14 @@ const Portfolio = () => {
                     {item.newImage.map((image) => (
                       <div
                         key={image.id}
-                        className={`h-14 min-[500px]:h-20 ${selectedImageId === image.id + image.name ? 'border-[4px] border-yellow-400 rounded-[13px]' : ''
+                        className={` ${selectedImageId === image.id + image.name ? 'border-[4px] border-yellow-400 flex justify-center rounded-[13px]' : ''
                           }`}
                       >
-                        <img
+                        <LazyLoadImage
+                          effect="blur"
                           src={image.img}
                           alt={`${image.id + image.name}`}
-                          className="object-cover w-full h-full rounded-lg cursor-pointer"
+                          className="object-cover w-full h-16 md:h-20 border-2 rounded-lg cursor-pointer"
                           onClick={() => handleImageClick(index, image.img, (image.id + image.name))}
                         />
                       </div>
