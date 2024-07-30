@@ -115,12 +115,12 @@ const Portfolio = () => {
       </div>
       <div className="w-screen h-screen flex flex-col gap-11 items-center justify-center text-center">
         <h1 className="text-5xl  lg:text-8xl">Do you have a project?</h1>
-        <div className="relative">
+        <div className="relative ">
           <motion.svg
             animate={{ rotate: 360 }}
             transition={{ duration: 8, ease: "linear", repeat: Infinity }}
             viewBox="0 0 300 300"
-            className="w-52 h-52 md:w-[500px] md:h-[500px]"
+            className="w-52 h-52 md:w-[500px] md:h-[500px] "
           >
             <defs>
               <path
@@ -130,18 +130,17 @@ const Portfolio = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
+                React Developer and Node Developer
               </textPath>
             </text>
           </motion.svg>
           <Link
-            to="/contact"
+            to="https://www.linkedin.com/in/sapphiresmith/"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
           >
             Hire Me
           </Link>
-        </div>
-      </div>
+        </div>      </div>
     </motion.div>
   );
 };

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { dribbble, facebook, github, instagram, linkedin, pinterest } from "../assets";
+import { github, instagram, linkedin } from "../assets";
 import { useState } from "react";
 import Navlink from "./Navlink";
 import { motion } from "framer-motion";
@@ -96,23 +96,14 @@ const Navbar = () => {
         </Link>
       </div>
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/3">
-        <Link to="/">
-          <img src={github} alt="" width={24} height={24} />
+      <div className="hidden md:flex justify-end gap-4 w-1/3">
+        <Link to="https://github.com/SapphireSmith">
+          <img src={github} alt="github" width={24} height={24} />
         </Link>
-        <Link to="/">
-          <img src={dribbble} alt="" width={24} height={24} />
-        </Link>
-        <Link to="/">
+        <Link to="https://www.instagram.com/18sapphire/">
           <img src={instagram} alt="" width={24} height={24} />
         </Link>
-        <Link to="/">
-          <img src={facebook} alt="" width={24} height={24} />
-        </Link>
-        <Link to="/">
-          <img src={pinterest} alt="" width={24} height={24} />
-        </Link>
-        <Link to="/">
+        <Link to="https://www.linkedin.com/in/sapphiresmith/">
           <img src={linkedin} alt="" width={24} height={24} />
         </Link>
       </div>

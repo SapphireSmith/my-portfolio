@@ -1,4 +1,4 @@
-import { hero } from "../assets";
+import { github, hero, instagram, linkedin } from "../assets";
 import { motion } from 'framer-motion';
 import { HOME } from "../constants/data";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ const Home = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1.5 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 gap-5 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full flex flex-col lg:flex-row px-4 gap-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 z-10">
           <img src={hero} alt="Hero" className="w-full h-full object-contain" />
@@ -45,6 +45,17 @@ const Home = () => {
           <p className="md:text-xl">
             {HOME.desc}
           </p>
+          <div className="flex md:hidden gap-3">
+            <Link to="https://github.com/SapphireSmith">
+              <img src={github} alt="github" width={24} height={24} />
+            </Link>
+            <Link to="https://www.instagram.com/18sapphire/">
+              <img src={instagram} alt="" width={24} height={24} />
+            </Link>
+            <Link to="https://www.linkedin.com/in/sapphiresmith/">
+              <img src={linkedin} alt="" width={24} height={24} />
+            </Link>
+          </div>
           {/* BUTTONS */}
           <div className="w-full flex gap-4 pb-8">
             <Link to={'/portfolio'}>

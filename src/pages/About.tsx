@@ -15,7 +15,7 @@ const About = () => {
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   const handleKeyDown = (event: KeyboardEvent) => {
-    console.log('Key pressed:', event.key); 
+    console.log('Key pressed:', event.key);
     if (containerRef.current) {
       // Scroll the container div down by 100px
       containerRef.current.scrollBy({
