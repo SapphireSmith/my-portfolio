@@ -96,11 +96,11 @@ const Portfolio = () => {
                     </ol>
                   </p>
                   <div className="flex gap-4 justify-end">
-                    <Link to={item.link}>
+                    {/* <Link to={item.link}>
                       <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold rounded">
                         See Demo
                       </button>
-                    </Link >
+                    </Link > */}
                     <Link to={item.github}>
                       <button className="p-2 text-sm md:p-4 md:text-md lg:text-lg bg-white text-gray-600 font-semibold rounded">
                         GitHub
