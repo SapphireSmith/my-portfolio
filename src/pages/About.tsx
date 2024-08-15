@@ -2,6 +2,7 @@ import { motion, MotionValue, useInView, useScroll } from "framer-motion";
 import Brain from "../components/Brain";
 import { useEffect, useRef } from "react";
 import { BIO, SKILLS } from "../constants/data";
+import { me_2 } from "../assets";
 
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,7 +52,7 @@ const About = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <img
-              src="https://avatar.iran.liara.run/public/boy"
+              src={me_2}
               alt="My image"
               width={112}
               height={112}
@@ -67,7 +68,7 @@ const About = () => {
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
               {BIO.quote} <br />
-              please dont click the power button :)
+              please don't click the power button :)
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             {/* <div className="self-end">
