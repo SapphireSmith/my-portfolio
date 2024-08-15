@@ -66,7 +66,7 @@ const About = () => {
               {BIO.about}
             </p>
             {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
+            <span className="italic hidden sm:flex">
               {BIO.quote} <br />
               please don't click the power button :)
             </span>
