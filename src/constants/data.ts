@@ -226,7 +226,7 @@ interface Home {
 }
 
 export const BIO: Bio = {
-    about: ` I'm a Full Stack Developer, using React.js for frontend development 
+    about: ` I'm a Full Stack Developer, using React.js and Next.js for frontend development 
     and Node.js for backend development. Like most developers around the world, 
     I am also self-taught. I started with C and C++, writing my first "Hello World" 
     in Turbo C++ IDE instead of VS Code editor (Yes, the one with the blue console
@@ -268,10 +268,11 @@ export const SKILLS: string[] = [
 export const HOME: Home = {
     title: `I'm Sapphire smith, nice to meet you.`,
     desc: `
-    I'm a Full Stack Developer dedicated to crafting 
-    exceptional digital experiences. I'm focused on building 
-    responsive full-stack web applications with a strong emphasis
-    on frontend development using React and Next.js and Node.js and Express.js 
-    in backend.
+      I’m a Full Stack Developer passionate about building top-notch digital experiences.
+      My focus is on creating responsive, full-stack web applications. On the frontend,
+      I work with React and Next.js to craft dynamic interfaces, and on the backend, 
+      I rely on Node.js and Express.js to handle the server-side logic.
+      From clean, functional design to optimized performance, I’m all about making the web a better,
+      smoother place for users. Let’s build something awesome together! 🚀
     `
 }
