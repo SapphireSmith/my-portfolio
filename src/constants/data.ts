@@ -268,12 +268,12 @@ export const SKILLS: string[] = [
 export const HOME: Home = {
     title: `I'm Sapphire smith, nice to meet you.`,
 desc:`I’m a Full Stack Developer specializing in React, Next.js, Node.js, and Express.js. I create responsive, high-performance web applications with a focus on clean design and seamless user experience. Let’s build something great!`,
-    descg: `
+   /* descg: `
       I’m a Full Stack Developer passionate about building top-notch digital experiences.
       My focus is on creating responsive, full-stack web applications. On the frontend,
       I work with React and Next.js to craft dynamic interfaces, and on the backend, 
       I rely on Node.js and Express.js to handle the server-side logic.
       From clean, functional design to optimized performance, I’m all about making the web a better,
       smoother place for users. Let’s build something awesome together! 🚀
-    `
+    ` */
 }
